@@ -1,0 +1,137 @@
+:root {
+    --azul: hsl(228, 45%, 44%);
+    --azul_escuro_dark: hsl(212, 21%, 14%);
+    --azul_escuro: hsl(228, 12%, 48%);
+    --branco: hsl(0, 0%, 100%);
+    --creme: hsl(30, 38%, 92%);
+    --botão: hsl(158, 36%, 37%);
+    --botão_ativo: hsl(158, 37%, 13%);
+    --preto: black;
+ }
+
+body {
+    background-color: var(--creme);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+ .conteudo_principal {
+    background-color: var(--branco);
+    display: flex;
+    width: 550px;
+    border-radius: 5px;
+}
+
+.imagem_principal {
+    content: url(./images/image-product-desktop.jpg);
+    width: 275px;
+    border-radius: 5px 0 0 5px;
+}
+
+.conteudo_textos {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em 0 0 32px;
+}
+
+.conteudo_produto {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 11px;
+    color: var(--azul_escuro);
+}
+
+.conteudo_titulo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    width: 200px;
+    padding: 0.6em 0;
+}
+
+.conteudo_descrição {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: var(--azul_escuro);
+    padding: 0 0 2em 0;
+    width: 200px;
+    line-height: 20px;
+}
+
+.preços {
+    display: flex;
+    align-items: center;
+    margin: 0 0 1.8em;
+}
+
+.conteudo_preço {
+    padding-right: 1em;
+    color: var(--botão);
+    font-weight: 900;
+    font-size: 25px;  
+}
+
+.conteudo_preço2 {
+    text-decoration:line-through;
+    font-size: 14px;
+    color: var(--azul_escuro);
+}
+
+.botao_imagem::before {
+    content: url(./images/icon-cart.svg);
+    margin-right: 0.7em;
+}
+
+.botão_completo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--botão);
+    padding: 0.8em;
+    border-radius: 8px;
+    color: var(--branco);
+    font-weight: 500;
+    width: 190px;    
+}
+
+.botão_completo:hover {
+    background-color: var(--botão_ativo);
+    transition: .2s;
+}
+
+@media(max-width: 375px) {
+
+    .conteudo_principal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagem_principal {
+        content: url(./images/image-product-mobile.jpg);
+        width: 375px;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .conteudo_textos {
+        margin: 2em 0 2em 2em;
+    }
+    .conteudo_descrição {
+        width: 250px;
+    }
+    .conteudo_titulo {
+        width: 275px;  
+    }
+
+    .botão_completo {
+        width: 280px;    
+    }
+
+    .botão_completo:hover {
+        background-color: var(--botão_ativo);
+        transition: .2s;
+    }
+
+}
